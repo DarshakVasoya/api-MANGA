@@ -6,6 +6,7 @@ app=Flask(__name__)
 
 
 # load the manga data from json file
+
 with open('Data/data.json','r') as file:
     manga_data=json.load(file)
 
@@ -39,4 +40,4 @@ def get_chapter(title, chapter):
     return jsonify({"error": "Manga not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
