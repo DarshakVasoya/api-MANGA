@@ -14,7 +14,7 @@ with open('Data/data.json','r') as file:
 def get_all_manhua():
     return jsonify(manga_data)
 
-@app.route('/<title>', methods=['GET'])
+@app.route('    /<title>', methods=['GET'])
 def get_manhua_by_title(title):
     for manga in manga_data:
         if manga['title'].lower() == title.lower():
